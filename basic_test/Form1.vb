@@ -76,7 +76,7 @@ Public Class Form1
             ''serial con sal
             'str = "L0L!" & str_split(1).Trim & "?!#E("
             'gi = gi & str
-            System.IO.File.Delete(txt)
+            'System.IO.File.Delete(txt)
         Else
             MsgBox("no existe la ruta")
         End If
