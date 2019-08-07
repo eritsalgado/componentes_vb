@@ -1,0 +1,9 @@
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\bin\Debug\basic_test.exe
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\bin\Debug\basic_test.pdb
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\bin\Debug\basic_test.xml
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\obj\Debug\basic_test.Form1.resources
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\obj\Debug\basic_test.Resources.resources
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\obj\Debug\basic_test.vbproj.GenerateResource.Cache
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\obj\Debug\basic_test.exe
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\obj\Debug\basic_test.xml
+C:\Users\NEOGENESYS\AppData\Local\Temporary Projects\basic_test\obj\Debug\basic_test.pdb
