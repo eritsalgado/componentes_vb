@@ -63,11 +63,12 @@ Public Class Form1
                     If Not sLine Is Nothing Then
                         arrText.Add(sLine)
                         'MsgBox(sLine)
+                        TextBox1.Text += sLine & vbNewLine
                     End If
 
                 Loop Until sLine Is Nothing
                 objReader.Close()
-                TextBox1.Text = arrText.ToString
+
                 System.IO.File.Delete(txt)
             Catch ex As Exception
 
