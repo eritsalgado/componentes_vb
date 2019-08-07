@@ -49,24 +49,28 @@ Public Class Form1
         str = ""
 
         If File.Exists(lic) Then
+            Try
+                My.Computer.FileSystem.CopyFile(lic, txt,
+                            Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
+                            Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
 
-            My.Computer.FileSystem.CopyFile(lic, txt,
-            Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
-            Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+                Dim objReader As New StreamReader(txt)
+                Dim sLine As String = ""
+                Dim arrText As New ArrayList()
 
-            Dim objReader As New StreamReader(txt)
-            Dim sLine As String = ""
-            Dim arrText As New ArrayList()
+                Do
+                    sLine = objReader.ReadLine()
+                    If Not sLine Is Nothing Then
+                        arrText.Add(sLine)
+                        MsgBox(sLine)
+                    End If
 
-            Do
-                sLine = objReader.ReadLine()
-                If Not sLine Is Nothing Then
-                    arrText.Add(sLine)
-                    MsgBox(sLine)
-                End If
+                Loop Until sLine Is Nothing
+                objReader.Close()
+            Catch ex As Exception
 
-            Loop Until sLine Is Nothing
-            objReader.Close()
+            End Try
+
 
 
             'str = arrText(2)
