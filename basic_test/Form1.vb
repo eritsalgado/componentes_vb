@@ -35,10 +35,50 @@ Public Class Form1
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Label1.Text = gci()
+        TextBox1.Text = gci()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         End
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim lic, txt, str As String
+        lic = "C:\Program Files (x86)\TSplus\UserDesktop\files\license.lic"
+        txt = "C:\Program Files (x86)\TSplus\UserDesktop\files\license.txt"
+        str = ""
+
+        If File.Exists(lic) Then
+
+            My.Computer.FileSystem.CopyFile(lic, txt,
+            Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
+            Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+
+            Dim objReader As New StreamReader(txt)
+            Dim sLine As String = ""
+            Dim arrText As New ArrayList()
+
+            Do
+                sLine = objReader.ReadLine()
+                If Not sLine Is Nothing Then
+                    arrText.Add(sLine)
+                    MsgBox(sLine)
+                End If
+
+            Loop Until sLine Is Nothing
+            objReader.Close()
+
+
+            'str = arrText(2)
+            '' Split string based on spaces.
+            'Dim str_split As String() = str.Split(New Char() {"="c})
+
+            ''serial con sal
+            'str = "L0L!" & str_split(1).Trim & "?!#E("
+            'gi = gi & str
+            System.IO.File.Delete(txt)
+        Else
+            MsgBox("no existe la ruta")
+        End If
     End Sub
 End Class
