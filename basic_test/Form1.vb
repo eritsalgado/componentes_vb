@@ -62,11 +62,13 @@ Public Class Form1
                     sLine = objReader.ReadLine()
                     If Not sLine Is Nothing Then
                         arrText.Add(sLine)
-                        MsgBox(sLine)
+                        'MsgBox(sLine)
                     End If
 
                 Loop Until sLine Is Nothing
                 objReader.Close()
+                TextBox1.Text = arrText.ToString
+                System.IO.File.Delete(txt)
             Catch ex As Exception
 
             End Try
@@ -80,7 +82,7 @@ Public Class Form1
             ''serial con sal
             'str = "L0L!" & str_split(1).Trim & "?!#E("
             'gi = gi & str
-            'System.IO.File.Delete(txt)
+            '
         Else
             MsgBox("no existe la ruta")
         End If
